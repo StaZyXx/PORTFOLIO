@@ -5,7 +5,7 @@ import AnimatedNumber from "react-animated-numbers";
 const AnimatedNumbersList = [
     {
         metric: "Projets",
-        value: 30,
+        value: 20,
         postfix: "+",
     },
     {
@@ -34,7 +34,7 @@ const AchievementSection = () => {
                             <AnimatedNumber
                                 animateToNumber={achievement.value}
                                 transitions={(index)   => ({
-                                    duration: 3 + index + 0.5,
+                                    duration: 1 + index + 0.5,
                                 })}
                             />
                             {achievement.postfix}

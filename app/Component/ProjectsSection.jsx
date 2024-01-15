@@ -2,7 +2,7 @@
 import 'swiper/css';
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Autoplay, EffectCoverflow, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { A11y, Autoplay, EffectCoverflow, Pagination, Scrollbar } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,6 +16,7 @@ const ProjectsSection = () => {
     const textImage4 =
         "The Laying Grass est un jeu de réflexion et de logique. Le but est de former le plus grand carré d'herbe possible avec les cases d'herbes qui ont une forme similaires aux pièces de tetris, ces dernières nous sont attribués a chaque tour. Il y également des cases bonus qui vont venir avantager ou au contraire ralentir le joueur adverse. Ce projet a été effectué en deuxième année de SUPINFO. Ce projet a été effectué en C++ en groupe de 2.";
 
+    const textImage5 = "Flixify est un site de streaming de films et de séries. Il est possible de s'inscrire, de se connecter, de rechercher des films et des séries, de les noter et de les commenter. Ce projet a été effectué en première année de SUPINFO. Ce projet a été effectué en PHP, HTML, CSS et JavaScript en groupe de 2.";
     const slides = [
         {
             image: '/cardinalsChains.png',
@@ -45,6 +46,13 @@ const ProjectsSection = () => {
             text: textImage4,
             github: 'https://github.com/StaZyXx/2CCCPP',
         },
+        {
+            image: '/flixify.png',
+            title: 'Flixify',
+            languages: 'Langages utilisés: (PHP, HTML, CSS, JavaScript)',
+            text: textImage5,
+            github: 'https://github.com/StaZyXx/1PHPD',
+        }
     ];
 
     const [currentSlideText, setCurrentSlideText] = useState(slides[0].text);
@@ -53,7 +61,7 @@ const ProjectsSection = () => {
     const [currentSlideGithub, setCurrentSlideGithub] = useState(slides[0].github);
 
     const changeText = (swiper) => {
-        let activeIndex = swiper.activeIndex;
+        let activeIndex = swiper.realIndex + 1;
 
         if (swiper.params.loop) {
             activeIndex = (activeIndex % slides.length + slides.length) % slides.length;
@@ -98,7 +106,7 @@ const ProjectsSection = () => {
                 </Link>
             </div>
             <Swiper
-                modules={[Autoplay, EffectCoverflow, Navigation, Pagination, Scrollbar, A11y]}
+                modules={[Autoplay, EffectCoverflow, Pagination, Scrollbar, A11y]}
                 speed={1000}
                 autoplay={{ delay: 5000 }}
                 slidesPerView={3}
@@ -107,8 +115,10 @@ const ProjectsSection = () => {
                     dynamicBullets: true,
                 }}
                 grabCursor={true}
-                loop={false}
-                centeredSlides={true}
+                loop={true}
+                centeredSlides={false}
+                slide
+                numberSlides={5}
                 effect={'coverflow'}
                 coverflowEffect={{
                     rotate: 0,
@@ -121,7 +131,7 @@ const ProjectsSection = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <Image src={slide.image} alt={`Image d'un projet`} width={500} height={500} draggable={false} className="rounded" />
+                        <Image src={slide.image} alt={`Image d'un projet`} width={500} height={500} draggable={false} className="rounded"/>
                     </SwiperSlide>
                 ))}
             </Swiper>

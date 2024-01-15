@@ -109,13 +109,13 @@ const AboutSection = () => {
                     height={400}
                 />
             </div>
-            <div className="flex flex-col lg:w-1/2">
+            <div className="flex flex-col lg:w-1/2 xl:px-8 lg:px-6 px-4">
                 <div className="lg:mt-2 mt-3 lg:mb-1 mb-4 lg:text-start text-center">
                     <span
-                        className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB8D1E] via-[#91F4FE] to-white xl:text-4xl lg:text-3xl md:text-xl text-lg font-extrabold pl-1">À propos de moi</span>
+                        className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB8D1E] via-[#91F4FE] to-white xl:text-4xl lg:text-3xl md:text-xl text-lg font-extrabold">À propos de moi</span>
                 </div>
                 <div className=" lg:text-justify text-center">
-                    <p className="xl:text-lg lg:text-base text-xs xl:px-8 lg:px-6 px-4 text-[#929292] font-semibold">
+                    <p className="xl:text-lg lg:text-base text-xs text-[#929292] font-semibold">
                         Je suis actuellement étudiant en deuxième année à SUPINFO, une école d'informatique renommée.
                         Passionné par le monde du développement web, de la programmation et de la cyber sécurité, j’ai une
                         soif d’apprendre des langages de programmation modernes et des meilleures frameworks ainsi que le
