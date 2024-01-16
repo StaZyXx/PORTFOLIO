@@ -82,7 +82,7 @@ const ProjectsSection = () => {
     return (
         <div>
             <div className="lg:mt-2 mt-3 lg:mb-1 mb-4 text-center">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB8D1E] via-[#91F4FE] to-white xl:text-4xl lg:text-3xl md:text-2xl text-xl font-extrabold pl-1">
+                <span id="projects" className="pt-28 text-transparent bg-clip-text bg-gradient-to-r from-[#FB8D1E] via-[#91F4FE] to-white xl:text-4xl lg:text-3xl md:text-2xl text-xl font-extrabold pl-1">
                     Mes projets
                 </span>
             </div>
@@ -117,8 +117,6 @@ const ProjectsSection = () => {
                 grabCursor={true}
                 loop={true}
                 centeredSlides={false}
-                slide
-                numberSlides={5}
                 effect={'coverflow'}
                 coverflowEffect={{
                     rotate: 0,

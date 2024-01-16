@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  transition: scroll-top 0.5s ease-in-out;
+}
+
 @media screen and (min-width: 768px) {
   .header{
     clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);

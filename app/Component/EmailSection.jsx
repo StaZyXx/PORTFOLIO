@@ -9,7 +9,7 @@ const EmailSection = () => {
             <div className="flex flex-col sm:w-1/2 w-full xl:px-24 lg:px-18 md:px-12 px-6 mt-10">
                 <div>
                     <p className="xl:text-lg lg:text-base text-xs text-[#929292] font-semibold text-justify">
-                        <span
+                        <span id="contact"
                             className="text-transparent bg-clip-text bg-gradient-to-r from-[#FB8D1E] via-[#91F4FE] to-white xl:text-2xl lg:text-xl md:text-lg text-base font-extrabold pl-1">
                             Entrons en contact ! <br/>
                         </span>

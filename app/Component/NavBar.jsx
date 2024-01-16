@@ -23,15 +23,15 @@ const navLinks = [
 const NavBar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
-        <nav className="fixed top-0 left-0 right-0 z-10 bg-[#111111] bg-opacity-95 w-screen md:h-32 h-auto">
-            <div className="flex flex-wrap items-center justify-between xl:px-28 lg:px-20 md:px-12 px-4 py-6">
+        <nav className="fixed top-0 left-0 right-0 z-10 bg-[#111111] bg-opacity-95 w-screen md:h-24 h-auto">
+            <div className="flex flex-wrap items-center justify-between xl:px-28 lg:px-20 md:px-12 px-4 py-4">
                 <Link href={"/"}>
                     <Image
                         src="/logo.png"
                         alt="Logo"
                         width={75}
                         height={75}
-                        className="md:w-[75px] md:h-[75px] w-[50px] h-[50px]"
+                        className="md:w-[65px] md:h-[65px] w-[50px] h-[50px]"
                     />
                 </Link>
                 <div className="mobile-menu block md:hidden">

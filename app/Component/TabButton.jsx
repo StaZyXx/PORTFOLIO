@@ -12,5 +12,4 @@ const TabButton = ({ active, selectTab, children }) => {
         </button>
     );
 };
-
 export default TabButton;

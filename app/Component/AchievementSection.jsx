@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
-import AnimatedNumber from "react-animated-numbers";
+import dynamic from 'next/dynamic'
+const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
+    ssr: false,
+})
 
 const AnimatedNumbersList = [
     {
@@ -31,7 +34,7 @@ const AchievementSection = () => {
                     <div key={index} className="flex flex-col items-center justify-center mx-4 lg:mb-0 mb-10">
                         <div className="text-4xl font-bold text-center text-white flex flex-row">
                             {achievement.prefix}
-                            <AnimatedNumber
+                            <AnimatedNumbers
                                 animateToNumber={achievement.value}
                                 transitions={(index)   => ({
                                     duration: 1 + index + 0.5,
