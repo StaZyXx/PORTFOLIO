@@ -27,10 +27,15 @@ const AnimatedNumbersList = [
 ];
 
 const AchievementSection = () => {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
     return (
         <div className="md:mx-28 mx-14 my-24  rounded bg-gradient-to-r from-[#91F4FE] via-[#FB8D1E] to-[#91F4FE] p-[2px]">
             <div className="bg-[#1F1F1F] justify-between flex lg:flex-row flex-col h-auto w-auto px-8 py-8">
-                {AnimatedNumbersList.map((achievement, index) => (
+                {isClient && AnimatedNumbersList.map((achievement, index) => (
                     <div key={index} className="flex flex-col items-center justify-center mx-4 lg:mb-0 mb-10">
                         <div className="text-4xl font-bold text-center text-white flex flex-row">
                             {achievement.prefix}
