@@ -129,7 +129,7 @@ const ProjectsSection = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <Image src={slide.image} alt={`Image d'un projet`} width={500} height={500} draggable={false} className="rounded"/>
+                        <Image src={slide.image} alt={`Image d'un projet`} width={600} height={600} draggable={false} className="rounded 2xl:w-[600px] 2xl:h-[600px] w-[500px] h-[500px]"/>
                     </SwiperSlide>
                 ))}
             </Swiper>

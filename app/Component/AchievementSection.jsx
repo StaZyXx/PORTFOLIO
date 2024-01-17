@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import dynamic from 'next/dynamic'
 const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
     ssr: false,
